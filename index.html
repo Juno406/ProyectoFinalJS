@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Proyecto Final</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container container-flex">
+             <!--HEADER DE LA PAGINA--------------------->
+        <div class="main-header-container">
+            <h1 class="main-header-title">GameStore</h1>
+            <span class=" icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
+            <nav class="main-nav" id="main-nav">
+                <ul class="menu">
+                    <li class="menu-item"><a href="" class="menu-link">HOME</a></li>
+                    <li class="menu-item"><a href="" class="menu-link">SHOP</a></li>
+                    <li class="menu-item"><a href="" class="menu-link">CONTACT</a></li>
+                </ul>
+            </nav>
+            </div>
+            <!--LOGIN--------------->
+            <div class="main-header-container">
+                <a href="" class="main-header-link">
+                    <i class="fas fa-user">
+                       Login
+                    </i></a>
+                    <form name=form action="/#">
+                        <P>USUARIO: <--ESTE    <input type=text name=login> 
+                        <P>CONTRASEÑA: <--ESTE <input type=password name=password> 
+                        <input onclick=ValidarUsuario() type=button value=Acceder>
+                        </form> 
+                </div>
+                <!--BOTON DE CARRITO-------------->
+                <div class="main-header-container">
+                    <a href="#carro" class="main-header-btn">My cart <i class="fas fa-shopping-cart"></i></a>
+                    <input type="search" class="main-header-input" placeholder="Buscar Producto"><i class="fas fa-search"></i>
+                </div>
+            </div>
+        </header>
+        <!-------------SLIDER---------------->
+        <div class="container-slider">
+            <div class="slider" id="slider">
+                <div class="slider-section">
+                    <img src="img/img1.jpg" alt="" class="slider-img">
+                    <div class="slider-content">
+                        <h2 class="slider-title">Consolas</h2>
+                        <p class="slider-txt">Busca tu consola favorita</p>
+                        <a href="" class="slider-btn2">REVISAR!</a>
+                    </div>
+                </div>
+                <div class="slider-section">
+                    <img src="img/img2.jpg" alt="" class="slider-img">
+                </div>
+                <div class="slider-section">
+                    <img src="img/img3.jpg" alt="" class="slider-img">
+                </div>
+                <div class="slider-section">
+                    <img src="img/img4.jpg" alt="" class="slider-img">
+                </div>
+            </div>
+            <div class="slider-btn slider-btn-right" id="btn-right">&#62;</div>
+            <div class="slider-btn slider-btn-left" id="btn-left">&#60;</div>
+        </div>
+        <main class="main">
+            <!--CPNTAINER DE PRODUCTOS-->
+            <div class="container">
+            <h2 class="main-title">Nuevos Productos para ti</h2>
+            <section class="container-products">
+                <div class="product">
+                    <img src="img/product1.jpg" alt="" class="product-img">
+                    <div class="product-description">
+                        <h3 class="product-title">Super Smash Bros. Ultimate</h3>
+                        <span class="product-price">$39990</span>
+                    </div>
+                    <i class="product-icon fas fa-cart-plus addToCart" data-id="1"></i>
+                </div>
+                <div class="product">
+                    <img src="img/product2.png" alt="" class="product-img">
+                    <div class="product-description">
+                        <h3 class="product-title">Call Of Duty Black Ops Cold War</h3>
+                        <span class="product-price">$39990</span>
+                    </div>
+                    <i class="product-icon fas fa-cart-plus addToCart" data-id="2"></i>
+                </div>
+                <div class="product">
+                    <img src="img/product3.jpg" alt="" class="product-img">
+                    <div class="product-description">
+                        <h3 class="product-title">Crash Team Racing Nitro Fueled</h3>
+                        <span class="product-price">$22990</span>
+                    </div>
+                    <i class="product-icon fas fa-cart-plus addToCart" data-id="3"></i>
+                </div>
+                <div class="product">
+                    <img src="img/product4.png" alt="" class="product-img">
+                    <div class="product-description">
+                        <h3 class="product-title">Demon Souls</h3>
+                        <span class="product-price">$39990</span>
+                    </div>
+                    <i class="product-icon fas fa-cart-plus addToCart" data-id="4"></i>
+
+                </div>
+                <!--PRODUCTO PARA INSERTAR ------------> 
+                <!--
+                <div class="product">
+                    <img src="img/productx.jpg" alt="" class="product-img">
+                    <div class="product-description">
+                        <h3 class="product-title">Unknown</h3>
+                        <span class="product-price">$0</span>
+                    </div>
+                    <i class="product-icon fas fa-cart-plus addToCart" data-id="5"></i>
+                </div>
+                --> 
+            </section>
+        </div>
+        <!--CARRO DE COMPRAS--------------->
+        <section class="shopping-cart">
+            <div class="container">
+                <h1 class="text-center" id="carro">CARRO</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="shopping-cart-header">
+                            <h6>Producto</h6>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="shopping-cart-header">
+                            <h6 class="text-truncate">Precio</h6>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="shopping-cart-header">
+                            <h6>Cantidad</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopping-cart-items shoppingCartItemsContainer">
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="shopping-cart-total d-flex align-items-center">
+                            <p class="mb-0">Total</p>
+                            <p class="ml-4 mb-0 shoppingCartTotal">$0</p>
+                        
+                            <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
+                                data-target="#comprarModal">Comprar</button>
+                                <button class="btn btn-success ml-auto vaciarButton" type="button" data-toggle="modal"
+                                >Vaciar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="comprarModalLabel">Gracias por su compra</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Pronto recibirá su pedido</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--COMENTARIOS----------->
+        <section class="container-coment">
+            <h2 class="section-title">Comentarios</h2>
+            <h4 class="coment-title">Atencion</h4>
+            <p class="coment-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus illum porro eligendi, ratione nobis non quos nostrum pariatur fugit dolorum soluta laborum consectetur optio voluptate officia mollitia quaerat sint cum.</p>
+        </section>
+        </main>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+        <script src="js/slider.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/localstorage.js"></script>
+    </body>
+</html>
